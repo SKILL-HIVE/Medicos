@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Problem & Medicine Search</title>
+    <link rel="stylesheet" href="stls.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Health Problem & Prescription Finder</h1>
+        
+        <!-- Search Option -->
+        <div class="search-option">
+            <label for="searchInput">Search for a Health Problem or Medicine:</label>
+            <input type="text" id="searchInput" placeholder="Enter health problem or medicine name" onkeyup="searchHealthProblemOrMedicine()">
+        </div>
+
+        <!-- Select Option -->
+        <div class="select-option">
+            <label for="healthProblem">Or select a Health Problem:</label>
+            <select id="healthProblem" onchange="searchHealthProblemOrMedicine()">
+                <option value="">--Select a Health Problem--</option>
+                <!-- Options will be dynamically populated by JS -->
+            </select>
+        </div>
+
+        <!-- Prescription Output -->
+        <div id="prescriptionOutput"></div>
+
+        <!-- Google Image of the Medicine -->
+        <div id="medicineImageSection" style="display: none;">
+            <h3>Google Images of the Medicine:</h3>
+            <img id="medicineImg" src="" alt="Medicine Image" style="max-width: 300px; max-height: 300px;">
+            <div id="imageLink"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
